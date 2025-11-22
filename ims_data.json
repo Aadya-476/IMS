@@ -1,0 +1,130 @@
+{
+    "products": {
+        "P1A2B3C4": {
+            "id": "P1A2B3C4",
+            "category": "Electronics",
+            "name": "Laptop Model X",
+            "location_id": "W001",
+            "stock_level": 120,
+            "reorder_point": 30
+        },
+        "P5D6E7F8": {
+            "id": "P5D6E7F8",
+            "category": "Peripherals",
+            "name": "Wireless Mouse Z",
+            "location_id": "W002",
+            "stock_level": 35,
+            "reorder_point": 50
+        },
+        "P9G0H1I2": {
+            "id": "P9G0H1I2",
+            "category": "Components",
+            "name": "Memory Module 16GB",
+            "location_id": "W001",
+            "stock_level": 1000,
+            "reorder_point": 100
+        },
+        "P00A0B0C": {
+            "id": "P00A0B0C",
+            "category": "Apparel",
+            "name": "Safety Vest",
+            "location_id": "W002",
+            "stock_level": 10,
+            "reorder_point": 50
+        },
+        "P0D0E0F0": {
+            "id": "P0D0E0F0",
+            "category": "Home Goods",
+            "name": "Cleaning Wipes",
+            "location_id": "W001",
+            "stock_level": 5,
+            "reorder_point": 10
+        }
+    },
+    "documents": {
+        "D001": {
+            "id": "D001",
+            "type": "Delivery",
+            "status": "Ready",
+            "created_by": "SM001",
+            "created_at": "2025-11-22T16:16:04.137285",
+            "lines": [
+                {
+                    "product_id": "P1A2B3C4",
+                    "qty": 5,
+                    "category": "Electronics"
+                }
+            ],
+            "source_location": "W001",
+            "category_list": [
+                "Electronics"
+            ]
+        },
+        "R002": {
+            "id": "R002",
+            "type": "Receipt",
+            "status": "Waiting",
+            "created_by": "InvManager",
+            "created_at": "2025-11-22T16:16:04.137297",
+            "lines": [
+                {
+                    "product_id": "P9G0H1I2",
+                    "qty": 200,
+                    "category": "Components"
+                }
+            ],
+            "target_location": "W001",
+            "category_list": [
+                "Components"
+            ]
+        },
+        "T003": {
+            "id": "T003",
+            "type": "Internal",
+            "status": "Draft",
+            "created_by": "WH002",
+            "created_at": "2025-11-22T16:16:04.137299",
+            "lines": [
+                {
+                    "product_id": "P5D6E7F8",
+                    "qty": 20,
+                    "category": "Peripherals"
+                }
+            ],
+            "source_location": "W002",
+            "target_location": "W001",
+            "category_list": [
+                "Peripherals"
+            ]
+        },
+        "A004": {
+            "id": "A004",
+            "type": "Adjustment",
+            "status": "Done",
+            "created_by": "StockMaster",
+            "created_at": "2025-11-22T16:16:04.137301",
+            "lines": [
+                {
+                    "product_id": "P00A0B0C",
+                    "qty": -10,
+                    "category": "Apparel"
+                }
+            ],
+            "category_list": [
+                "Apparel"
+            ]
+        }
+    },
+    "locations": {
+        "W001": {
+            "id": "W001",
+            "name": "Main Warehouse",
+            "manager": "Alice"
+        },
+        "W002": {
+            "id": "W002",
+            "name": "Overflow Storage",
+            "manager": "Bob"
+        }
+    }
+}
